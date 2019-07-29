@@ -1,0 +1,14 @@
+.Board {
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+}
+
+.Board__table {
+  border: 4px solid #0A0F0D;
+}
+
+.Board__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

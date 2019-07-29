@@ -1,0 +1,15 @@
+.Cell {
+  height: 100px;
+  width: 100px;
+  background-color: #2A1E5C;
+  /* border: 5px solid blue; */
+  box-sizing: border-box;
+}
+
+.Cell:hover {
+  cursor: pointer;
+}
+
+.Cell-lit {
+  background-color: white;
+}
