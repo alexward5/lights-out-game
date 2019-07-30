@@ -70,7 +70,7 @@ class Board extends Component {
 
   flipCellsAround = (coord) => {
     console.log(coord);
-    const {ncols, nrows} = this.props;
+    const {nrows, ncols} = this.props;
     const board = this.state.board;
     const [y, x] = coord.split("-").map(Number);
 
@@ -83,25 +83,12 @@ class Board extends Component {
     }
 
     flipCell(y, x);
-    // flipCell(y-1,x);
-    // flipCell(y, x+1);
-    // flipCell(y+1, x);
-    // flipCell(y, x-1);
+    flipCell(y-1,x);
+    flipCell(y+1, x);
+    flipCell(y, x+1);
+    flipCell(y, x-1);
 
-    // win when every cell is turned off
-    // determine is the game has been won
-    let unlitCells = 0;
-    for (let i=0; i<this.props.nrows; i++) {
-      for (let j=0; j<this.props.ncols; j++) {
-        if (!board[i][j]) {
-          unlitCells += 1;
-        }
-      }
-    }
-  
-    const hasWon = unlitCells > 0 ? false : true;
-
-    this.setState({board, hasWon});
+    this.setState({board});
   }
 
   // generate jsx table elements
